@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://vwxe1g4g0xp8"]
+
+[ext_resource type="Script" uid="uid://cmv41yrd4bs8" path="res://entities/props/props.gd" id="1_0puc6"]
+[ext_resource type="Texture2D" uid="uid://cbi8x2yfmj7be" path="res://assets/Orange/texture_01.png" id="2_d0tje"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qsdcg"]
+albedo_texture = ExtResource("2_d0tje")
+
+[sub_resource type="BoxMesh" id="BoxMesh_6q1sb"]
+material = SubResource("StandardMaterial3D_qsdcg")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_6q1sb"]
+
+[node name="PropBox" type="RigidBody3D" unique_id=735513655 node_paths=PackedStringArray("label_3d")]
+script = ExtResource("1_0puc6")
+label_3d = NodePath("Label3D")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1604103277]
+mesh = SubResource("BoxMesh_6q1sb")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=307081408]
+shape = SubResource("BoxShape3D_6q1sb")
+
+[node name="Label3D" type="Label3D" parent="." unique_id=741003463]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.70000005, 0)
+text = "5 kg"

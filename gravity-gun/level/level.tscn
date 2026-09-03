@@ -1,7 +1,8 @@
 [gd_scene format=3 uid="uid://c51bomut66nw4"]
 
 [ext_resource type="PackedScene" uid="uid://bh570g1qqnxie" path="res://entities/player/player.tscn" id="1_5gx2l"]
-[ext_resource type="Texture2D" uid="uid://cjbcv1fekfxds" path="res://assets/Green/texture_02.png" id="1_7lnir"]
+[ext_resource type="PackedScene" uid="uid://vwxe1g4g0xp8" path="res://entities/props/propBox.tscn" id="2_5gx2l"]
+[ext_resource type="Texture2D" uid="uid://bluxbdeh3j72n" path="res://assets/Green/texture_01.png" id="2_qohg2"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_5gx2l"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -16,7 +17,7 @@ sky = SubResource("Sky_qohg2")
 glow_enabled = true
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5gx2l"]
-albedo_texture = ExtResource("1_7lnir")
+albedo_texture = ExtResource("2_qohg2")
 
 [node name="Level" type="Node" unique_id=292372105]
 
@@ -36,3 +37,22 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
 use_collision = true
 size = Vector3(10, 1, 10)
 material = SubResource("StandardMaterial3D_5gx2l")
+
+[node name="PropBox" parent="World" unique_id=735513655 instance=ExtResource("2_5gx2l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 2.5306733, -3.660545)
+
+[node name="PropBox2" parent="World" unique_id=62811201 instance=ExtResource("2_5gx2l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3, 2.5306733, -3.660545)
+weight = 2.0
+
+[node name="PropBox3" parent="World" unique_id=107620724 instance=ExtResource("2_5gx2l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.099999905, 2.5306733, -3.660545)
+weight = 5.0
+
+[node name="PropBox4" parent="World" unique_id=830568556 instance=ExtResource("2_5gx2l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1000001, 2.5306733, -3.660545)
+weight = 10.0
+
+[node name="PropBox5" parent="World" unique_id=1548223710 instance=ExtResource("2_5gx2l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.3, 2.5306733, -3.660545)
+weight = 100.0
